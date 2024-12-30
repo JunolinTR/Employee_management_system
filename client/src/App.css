@@ -1,0 +1,612 @@
+/* App.css */
+
+.tableContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.employeeTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employeeTable thead {
+  background-color: #f4f6f9;
+}
+
+.employeeTable th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e0e4e8;
+}
+
+.employeeTable tr {
+  transition: background-color 0.3s ease;
+}
+
+.employeeTable tbody tr {
+  cursor: pointer;
+}
+
+.employeeTable tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.employeeTable td {
+  padding: 12px 15px;
+  color: #34495e;
+  border-bottom: 1px solid #e7eaee;
+}
+
+.actionButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.editButton {
+  background-color: #3498db;
+  color: white;
+  margin-right: 8px;
+}
+
+.editButton:hover {
+  background-color: #2980b9;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+.confirmDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.confirmDialog p {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.confirmDialog button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.confirmDialog .confirmYes {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.confirmDialog .confirmNo {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .employeeTable {
+    font-size: 0.9rem;
+  }
+
+  .employeeTable th,
+  .employeeTable td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employeeTable {
+    font-size: 0.8rem;
+  }
+
+  .actionButton {
+    padding: 4px 8px;
+  }
+}.tableContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.employeeTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employeeTable thead {
+  background-color: #f4f6f9;
+}
+
+.employeeTable th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e0e4e8;
+}
+
+.employeeTable tr {
+  transition: background-color 0.3s ease;
+}
+
+.employeeTable tbody tr {
+  cursor: pointer;
+}
+
+.employeeTable tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.employeeTable td {
+  padding: 12px 15px;
+  color: #34495e;
+  border-bottom: 1px solid #e7eaee;
+}
+
+.actionButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.editButton {
+  background-color: #3498db;
+  color: white;
+  margin-right: 8px;
+}
+
+.editButton:hover {
+  background-color: #2980b9;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+.confirmDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.confirmDialog p {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.confirmDialog button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.confirmDialog .confirmYes {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.confirmDialog .confirmNo {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .employeeTable {
+    font-size: 0.9rem;
+  }
+
+  .employeeTable th,
+  .employeeTable td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employeeTable {
+    font-size: 0.8rem;
+  }
+
+  .actionButton {
+    padding: 4px 8px;
+  }
+}.tableContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.employeeTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employeeTable thead {
+  background-color: #f4f6f9;
+}
+
+.employeeTable th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e0e4e8;
+}
+
+.employeeTable tr {
+  transition: background-color 0.3s ease;
+}
+
+.employeeTable tbody tr {
+  cursor: pointer;
+}
+
+.employeeTable tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.employeeTable td {
+  padding: 12px 15px;
+  color: #34495e;
+  border-bottom: 1px solid #e7eaee;
+}
+
+.actionButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.editButton {
+  background-color: #3498db;
+  color: white;
+  margin-right: 8px;
+}
+
+.editButton:hover {
+  background-color: #2980b9;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+.confirmDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.confirmDialog p {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.confirmDialog button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.confirmDialog .confirmYes {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.confirmDialog .confirmNo {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .employeeTable {
+    font-size: 0.9rem;
+  }
+
+  .employeeTable th,
+  .employeeTable td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employeeTable {
+    font-size: 0.8rem;
+  }
+
+  .actionButton {
+    padding: 4px 8px;
+  }
+}
+
+
+
+/* Search.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  color:#506ced;
+  margin-top: 20px;
+}
+
+.res{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+button {
+  background-color: #506ced;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #506ced;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+strong {
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.employee-details {
+  text-align: left;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Create.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.formContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color:#506ced;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #555;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.formInput:focus {
+  border-color: #506ced;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+}
+
+.errorMessage {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.submitButton, .resetButton {
+  background-color:#506ced;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex: 1;
+}
+
+.submitButton:hover, .resetButton:hover {
+  background-color: #506ced;
+  transform: scale(1.05);
+}
+
+.submitButton:active, .resetButton:active {
+  transform: scale(1);
+}
+
+.resetButton {
+  background-color: #e74c3c;
+}
+
+.resetButton:hover {
+  background-color: #c0392b;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
